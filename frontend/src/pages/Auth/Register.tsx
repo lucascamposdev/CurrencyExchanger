@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"
 
 import { z } from "zod"
@@ -44,7 +43,7 @@ const Register = () => {
       return (
         <div className="w-72">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
             <FormField
               control={form.control}
               name="name"
