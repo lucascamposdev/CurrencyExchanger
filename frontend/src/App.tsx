@@ -1,6 +1,5 @@
 import './App.css'
 
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -10,9 +9,10 @@ import PrivateRoute from './components/layouts/PrivateRoute'
 import MainLayout from './components/layouts/MainLayout'
 import Login from './pages/Auth/Login'
 import Register from './pages/Auth/Register'
+import { useAuth } from './hooks/useAuth'
 
 function App() {
-  const [ isAuthenticated ] = useState<boolean>(false);
+  const { user } = useAuth();
 
   return (
     <ThemeProvider>
@@ -29,7 +29,7 @@ function App() {
             <Route
             path='/app'
             element={
-              <PrivateRoute isAuthenticated={isAuthenticated}>
+              <PrivateRoute isAuthenticated={user ? true : false}>
                 <MainLayout/>
               </PrivateRoute>
             }

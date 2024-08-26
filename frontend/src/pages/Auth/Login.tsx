@@ -13,6 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { useAuth } from "@/hooks/useAuth"
 
 const formSchema = z.object({
   email: z.string().min(2).max(50).email(),
@@ -20,6 +21,8 @@ const formSchema = z.object({
 });
 
 const Login = () => {
+
+  const { login } = useAuth();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -30,7 +33,7 @@ const Login = () => {
   });
 
 function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+    login(values.email, values.password);
   }
 
   return (
