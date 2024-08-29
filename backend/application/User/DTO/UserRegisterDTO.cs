@@ -1,4 +1,4 @@
-﻿namespace backend.DTO;
+﻿namespace backend.application.User.DTO;
 
 public class UserRegisterDTO
 {

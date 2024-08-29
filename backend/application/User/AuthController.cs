@@ -1,10 +1,8 @@
-﻿using backend.DTO;
-using backend.Entity;
-using backend.Services;
+﻿using backend.application.User.DTO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace backend.Controllers;
+namespace backend.application.User;
 
 [ApiController]
 [Route("[controller]")]
@@ -27,7 +25,7 @@ public class AuthController : ControllerBase
         }
         catch (ApplicationException ex)
         {
-            return BadRequest(new { Message = ex.Message });
+            return BadRequest(new { ex.Message });
         }
     }
 
@@ -41,7 +39,7 @@ public class AuthController : ControllerBase
         }
         catch (ApplicationException ex)
         {
-            return BadRequest(new { Message = ex.Message });
+            return BadRequest(new { ex.Message });
         }
     }
 
@@ -55,7 +53,7 @@ public class AuthController : ControllerBase
         }
         catch (ApplicationException ex)
         {
-            return BadRequest(new { Message = ex.Message });
+            return BadRequest(new { ex.Message });
         }
     }
 }

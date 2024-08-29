@@ -1,6 +1,3 @@
-using backend.Config;
-using backend.Entity;
-using backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +5,10 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using dotenv.net;
 using Microsoft.AspNetCore.Hosting;
+using backend.domain;
+using backend.Infra;
+using backend.application.User;
+using backend.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +16,7 @@ DotEnv.Config();
 
 // Adiciona a configuração com o banco de dados
 builder.Services.AddDbContext<Context>(options =>
-    options.UseSqlite("Data Source=Data/database.db"));
+    options.UseSqlite("Data Source=Infra/database.db"));
 
 // Adiciona o Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>

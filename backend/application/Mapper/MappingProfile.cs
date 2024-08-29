@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
-using backend.Entity;
+using backend.application.User.DTO;
+using backend.domain;
 
-namespace backend.DTO;
+namespace backend.application.Mapper;
 
 public class MappingProfile : Profile
 {

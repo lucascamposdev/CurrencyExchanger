@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
-using backend.DTO;
-using backend.Entity;
+using backend.application.User.DTO;
+using backend.domain;
+using backend.Security;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
-namespace backend.Services;
+namespace backend.application.User;
 
 public class AuthService
 {

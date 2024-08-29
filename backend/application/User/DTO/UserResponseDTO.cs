@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace backend.DTO;
+namespace backend.application.User.DTO;
 
 public class UserResponseDTO
 {
@@ -8,8 +8,9 @@ public class UserResponseDTO
     public UserData UserData { get; set; }
 }
 
-public class UserData { 
-   public string Email { get; set; }
-   public string Name { get; set; }
+public class UserData
+{
+    public string Email { get; set; }
+    public string Name { get; set; }
 }
 

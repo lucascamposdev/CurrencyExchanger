@@ -1,9 +1,9 @@
-﻿using backend.Entity;
+﻿using backend.domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace backend.Config;
+namespace backend.Infra;
 
 public class Context : IdentityDbContext<ApplicationUser>
 {
