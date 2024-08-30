@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -13,6 +13,12 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { useState } from "react"
+import { useAuth } from "@/hooks/useAuth"
+
+interface ApiError {
+  message: string;
+}
 
 const formSchema = z.object({
     name: z.string().min(2).max(50),
@@ -26,6 +32,10 @@ const formSchema = z.object({
 
 const Register = () => {
 
+  const [registerError, setRegisterError] = useState<string | null>(null);
+  const { register } = useAuth();
+  const navigate = useNavigate(); 
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -36,8 +46,15 @@ const Register = () => {
         },
       });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
+      async function onSubmit(values: z.infer<typeof formSchema>) {
+        try {
+          await register(values.email, values.name, values.password);
+          navigate("/");
+        } catch (error) {
+          console.log(error)
+          let msg = (error as ApiError).message;
+          setRegisterError(msg);
+        }
       }
     
       return (
@@ -96,9 +113,14 @@ const Register = () => {
                 </FormItem>
               )}
               />
+            {registerError && (
+              <div className="text-red-500 text-sm pb-3 text-center">
+                {registerError}
+              </div>
+            )}
             <Button className="w-full" type="submit">Submit</Button>
             <div className="text-center">Already have an account? 
-              <Link to="/"> <u>Sign In</u></Link> 
+              <Link to="/auth/login"> <u>Sign In</u></Link> 
             </div>
           </form>
         </Form>

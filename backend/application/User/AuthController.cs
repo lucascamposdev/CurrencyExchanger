@@ -44,10 +44,11 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("validate")]
-    public async Task<IActionResult> ValidateToken([FromBody] string token)
+    public async Task<IActionResult> ValidateToken()
     {
         try
         {
+            var token = ExtractToken();
             var result = await _authService.ValidateToken(token);
             return Ok(result);
         }
@@ -55,6 +56,19 @@ public class AuthController : ControllerBase
         {
             return BadRequest(new { ex.Message });
         }
+    }
+
+    private string? ExtractToken()
+    {
+        var authorizationHeader = HttpContext.Request.Headers["Authorization"].ToString();
+
+        if (authorizationHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+        {
+            var token = authorizationHeader["Bearer ".Length..].Trim();
+            return token;
+        }
+
+        throw new ApplicationException("Invalid token.");
     }
 }
 

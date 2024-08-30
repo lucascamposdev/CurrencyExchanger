@@ -14,6 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 DotEnv.Config();
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()  // Permite qualquer origem
+                   .AllowAnyHeader()  // Permite qualquer cabe?alho
+                   .AllowAnyMethod(); // Permite qualquer m?todo (GET, POST, etc.)
+        });
+});
+
 // Adiciona a configuração com o banco de dados
 builder.Services.AddDbContext<Context>(options =>
     options.UseSqlite("Data Source=Infra/database.db"));
@@ -65,6 +77,8 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

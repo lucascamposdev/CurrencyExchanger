@@ -1,72 +1,88 @@
-import React, { createContext, useContext, useState } from "react";
-import axios from "axios";
-import apiUrl from "@/utils/apiUrl";
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
+import { login as loginService, register as registerService, fetchCurrentUser as fetchCurrentUserService } from '@/service/authService';
+import TOKEN_COOKIE_NAME from '@/utils/TOKEN_COOKIE_NAME';
 
 interface User {
-  id: string;
-  name: string;
   email: string;
+  name: string;
 }
 
-interface AuthContextType {
+interface AuthContextProps {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
+  register: (email: string, name: string, password: string) => Promise<void>;
   logout: () => void;
-  register: (name: string, email: string, password: string) => Promise<void>;
+  validateToken: () => Promise<void>;
+  isLoading: boolean;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-// Criando a instância do Axios
-const axiosInstance = axios.create({
-  baseURL: apiUrl,
-  headers: {
-    "Content-Type": "application/json",
-  },
-  httpsAgent: new (require('https').Agent)({  
-    rejectUnauthorized: false 
-  })
-});
+const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await axiosInstance.post("/auth/login", { email, password });
-      localStorage.setItem("token", response.data.token); 
-      setUser(response.data.user); // Atualiza o usuário após login bem-sucedido
+      const { token, userData } = await loginService(email, password);
+      
+      Cookies.set(TOKEN_COOKIE_NAME, token, { expires: 7, secure: true, sameSite: 'Strict' });
+      
+      setUser(userData);
     } catch (error) {
-      console.error("Erro no login:", error);
+      throw error;
+    }
+  };
+
+  const register = async (email: string, name: string, password: string) => {
+    try {
+      const { token, userData } = await registerService(email, name, password);
+      
+      Cookies.set(TOKEN_COOKIE_NAME, token, { expires: 7, secure: true, sameSite: 'Strict' });
+      
+      setUser(userData);
+    } catch (error) {
+      throw error;
     }
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("token");
+    Cookies.remove(TOKEN_COOKIE_NAME);
   };
 
-  const register = async (name: string, email: string, password: string) => {
-    try {
-      const response = await axiosInstance.post("/auth/register", { name, email, password });
-      setUser(response.data.user);
-      localStorage.setItem("token", response.data.token);
-    } catch (error) {
-      console.error("Erro no registro:", error);
+  const validateToken = async () => {
+    const token = Cookies.get(TOKEN_COOKIE_NAME);
+    setIsLoading(true);
+
+    if (token) {
+      try {
+        const userData = await fetchCurrentUserService(token);
+        setUser(userData);
+      } catch (error) {
+        console.error('Failed to fetch current user', error);
+        Cookies.remove(TOKEN_COOKIE_NAME);
+        setUser(null);
+      }
+    } else {
+      setUser(null);
     }
+    setIsLoading(false);
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, register }}>
+    <AuthContext.Provider value={{ user, login, register, logout, validateToken, isLoading }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
+// Hook para usar o contexto de autenticação
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider");
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
 };

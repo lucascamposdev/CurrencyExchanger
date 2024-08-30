@@ -9,35 +9,36 @@ import PrivateRoute from './components/layouts/PrivateRoute'
 import MainLayout from './components/layouts/MainLayout'
 import Login from './pages/Auth/Login'
 import Register from './pages/Auth/Register'
-import { useAuth } from './hooks/useAuth'
+import { AuthProvider } from './hooks/useAuth'
 
 function App() {
-  const { user } = useAuth();
 
   return (
-    <ThemeProvider>
-      <BrowserRouter>
+    <AuthProvider>
+      <ThemeProvider>
+        <BrowserRouter>
           <Routes>
 
             {/* Layout de Autenticacao */}
-            <Route path='/' element={<AuthLayout/>}>
-              <Route index element={<Login />} />
+            <Route path='/auth' element={<AuthLayout />}>
+              <Route path='login' element={<Login />} />
               <Route path="register" element={<Register />} />
             </Route>
 
             {/* Layout Principal com Checagem de isAuthenticated */}
             <Route
-            path='/app'
-            element={
-              <PrivateRoute isAuthenticated={user ? true : false}>
-                <MainLayout/>
-              </PrivateRoute>
-            }
+              path='/'
+              element={
+                <PrivateRoute>
+                  <MainLayout />
+                </PrivateRoute>
+              }
             />
 
           </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+        </BrowserRouter>
+      </ThemeProvider>
+    </AuthProvider>
   )
 }
 

@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\Config",
-    "\\backend\\Controllers"
+    "\\backend\\application",
+    "\\backend\\application\\User"
   ],
-  "SelectedNode": "\\backend\\backend.sln",
+  "SelectedNode": "\\backend\\application\\User\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }
