@@ -1,10 +1,13 @@
-import React from 'react'
+import { useTheme } from '@/context/ThemeContext'
+import Navbar from '../features/Navbar/Navbar'
 
-type Props = {}
-
-const MainLayout = (props: Props) => {
+const MainLayout = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div>MainLayout</div>
+    <div className={`${theme === 'light' ? 'bg-primary text-secondary' : 'bg-secondary text-primary'} h-screen `}>
+      <Navbar/>
+    </div>
   )
 }
 
