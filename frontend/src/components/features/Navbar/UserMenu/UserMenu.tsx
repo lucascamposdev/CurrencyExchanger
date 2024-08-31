@@ -9,15 +9,24 @@ import {
     PopoverTrigger,
   } from "@/components/ui/popover"
 
-import { useAuth } from "@/hooks/useAuth"
 import ThemeToggler from "./ThemeToggler";
 import React from "react";
+import getCookieData from "@/utils/getCookieData";
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const UserMenu = () => {
-    const { user } = useAuth(); // colocar infos do user no cookie
+  const cookieObject = getCookieData();
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () =>{
+    logout();
+    navigate("/auth/login");
+  }
 
   return (
-    <div className="p-3">
+    <div className="absolute left-0 m-3">
     <Popover>
         <PopoverTrigger asChild>
             <ShadCnAvatar className="cursor-pointer">
@@ -27,12 +36,12 @@ const UserMenu = () => {
 
         <PopoverContent className="rounded-xl">
             <div className="flex flex-col items-start">
-                <p>Lucas Campos</p>
-                <p className="text-[12px] text-gray-500">lucaskmps@gmail.com</p>
+                <p>{cookieObject?.userData.name}</p>
+                <p className="text-[12px] text-gray-500">{cookieObject?.userData.email}</p>
             </div>
             <hr className="my-5"/>
             <ListItem><ThemeToggler/></ListItem>
-            <ListItem>Logout</ListItem>
+            <ListItem onClick={() => handleLogout()}>Logout</ListItem>
         </PopoverContent >
     </Popover>
     </div>
@@ -41,11 +50,12 @@ const UserMenu = () => {
 
 interface ListItemProps {
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const ListItem = ({ children }: ListItemProps) =>{
+const ListItem = ({ children, onClick }: ListItemProps) =>{
   return (
-    <p className="py-2 cursor-pointer">{children}</p>
+    <div className="py-2 cursor-pointer" onClick={onClick}>{children}</div>
   )
 }
 

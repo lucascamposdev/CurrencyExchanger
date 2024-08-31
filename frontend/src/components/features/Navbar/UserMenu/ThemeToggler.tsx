@@ -3,7 +3,7 @@ import { useTheme } from "@/context/ThemeContext"
 
 const ThemeToggler = () => {
 
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
 
     const handleThemeToggler = () :void =>{
       toggleTheme();
@@ -12,7 +12,7 @@ const ThemeToggler = () => {
   return (
     <div className="flex items-center">
         <p>Theme</p>
-        <Switch className="ml-auto" onClick={() => handleThemeToggler()}/>
+        <Switch className="ml-auto" onClick={() => handleThemeToggler()} checked={theme == 'dark' ? true : false}/>
     </div>
   )
 }
