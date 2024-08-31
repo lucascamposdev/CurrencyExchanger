@@ -1,5 +1,4 @@
-import TOKEN_COOKIE_NAME from '@/utils/TOKEN_COOKIE_NAME';
-import Cookies from 'js-cookie';
+import getCookieData from '@/utils/getCookieData';
 import { Navigate } from 'react-router-dom';
 
 type Props = {
@@ -7,9 +6,10 @@ type Props = {
 }
 
 const PrivateRoute = ({ children }: Props) => {
-  const token = Cookies.get(TOKEN_COOKIE_NAME);
 
-  return token ? <>{children}</> : <Navigate to="/auth/login"/>
+  const data = getCookieData();
+
+  return data?.token ? <>{children}</> : <Navigate to="/auth/login"/>
 }
 
 export default PrivateRoute
