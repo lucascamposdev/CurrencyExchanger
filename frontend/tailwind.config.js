@@ -24,15 +24,12 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary:  "#fafafa",
-        secondary: "#020202",
+        secondary: "#1a1a1a",
+        third: "#f2f3f7",
+        fourth: "black",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
-        },
-        dark: {
-          primary: "#020202",
-          secondary: "#fafafa",
-          // Outras cores...
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -69,6 +66,10 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        nunito: ['Nunito Sans', 'sans-serif'], 
+        amsterdam: ['Baskervville SC', 'serif'],
       },
     },
   },
