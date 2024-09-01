@@ -26,11 +26,11 @@ const UserMenu = () => {
   }
 
   return (
-    <div className="absolute left-0 m-3">
+    <div className="absolute right-0 m-3">
     <Popover>
         <PopoverTrigger asChild>
             <ShadCnAvatar className="cursor-pointer">
-                <AvatarFallback className="border-2">LC</AvatarFallback>
+                <AvatarFallback>{cookieObject?.userData?.name[0]?.toLocaleUpperCase()}</AvatarFallback>
             </ShadCnAvatar>
         </PopoverTrigger >
 

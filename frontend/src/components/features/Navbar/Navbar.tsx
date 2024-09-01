@@ -1,10 +1,14 @@
 import UserMenu from "./UserMenu/UserMenu"
+import { RiExchange2Fill } from "react-icons/ri";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-center px-3 pt-5">
+    <nav className="flex items-center justify-center h-[65px]">
         <UserMenu/>
-        <h1 className="text-xl">Exchange</h1>
+        <h1 className="font-bold font-nunito flex items-center gap-2">
+        <RiExchange2Fill size={20}/>
+        Currency Exchanger
+        </h1>
     </nav>
   )
 }
