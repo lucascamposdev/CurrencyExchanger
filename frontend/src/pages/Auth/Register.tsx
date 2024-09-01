@@ -48,7 +48,8 @@ const Register = () => {
 
       async function onSubmit(values: z.infer<typeof formSchema>) {
         try {
-          await register(values.email, values.name, values.password);
+          const name = values.name.charAt(0).toUpperCase() + values.name.slice(1).toLowerCase();
+          await register(values.email, name, values.password);
           navigate("/");
         } catch (error) {
           console.log(error)
