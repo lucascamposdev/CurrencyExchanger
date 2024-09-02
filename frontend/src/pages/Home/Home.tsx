@@ -1,11 +1,11 @@
 import BalanceWrapper from "./BalanceWrapper/BalanceWrapper";
-import MenuWrapper from "./MenuWrapper/MenuWrapper";
+import ActionWrapper from "./ActionWrapper/ActionWrapper";
 
 const Home = () => {
   return (
-    <div className=" flex-1 flex lg:flex-row flex-col font-nunito">
+    <div className=" flex-1 flex lg:flex-row flex-col font-nunito sm:mx-20">
       <BalanceWrapper className="lg:flex-1"/>
-      <MenuWrapper className="lg:flex-1"/>
+      <ActionWrapper className="lg:flex-1"/>
     </div>
   )
 }

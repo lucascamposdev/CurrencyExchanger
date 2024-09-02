@@ -26,7 +26,7 @@ const UserMenu = () => {
   }
 
   return (
-    <div className="absolute right-0 m-3">
+    <div className="absolute right-3 m-3">
     <Popover>
         <PopoverTrigger asChild>
             <ShadCnAvatar className="cursor-pointer">
