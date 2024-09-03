@@ -1,35 +1,37 @@
 import { BsCurrencyExchange } from "react-icons/bs";
 import { BsSendFill } from "react-icons/bs";
 import { GrTransaction } from "react-icons/gr";
+import { ContentsType } from "./ActionWrapper";
 
 type NavigationMenuProps = {
     activeComponent: string;
+    contents: ContentsType;
     togglePage: (page: string) => void;
   };
   
-  const NavigationMenu = ({ activeComponent, togglePage }: NavigationMenuProps) => {
+  const NavigationMenu = ({ activeComponent, togglePage, contents }: NavigationMenuProps) => {
     return (
       <div className="flex lg:justify-normal justify-around overflow-clip gap-2">
         <Button
           icon={<BsCurrencyExchange size={20} />}
-          onClick={() => togglePage('convert')}
-          isActive={activeComponent === 'convert'}
+          onClick={() => togglePage(contents.first)}
+          isActive={activeComponent === contents.first}
         >
           Convert
         </Button>
   
         <Button
           icon={<BsSendFill size={20} />}
-          onClick={() => togglePage('send')}
-          isActive={activeComponent === 'send'}
+          onClick={() => togglePage(contents.second)}
+          isActive={activeComponent === contents.second}
         >
           Send
         </Button>
   
         <Button
           icon={<GrTransaction size={20} />}
-          onClick={() => togglePage('transactions')}
-          isActive={activeComponent === 'transactions'}
+          onClick={() => togglePage(contents.third)}
+          isActive={activeComponent === contents.third}
         >
           Transactions
         </Button>
@@ -47,7 +49,7 @@ type NavigationMenuProps = {
     return (
       <button
         className={`flex text-sm sm:flex-1 justify-center p-3 sm:rounded rounded-full sm:flex-row flex-col items-center gap-3 bg-third text-secondary dark:bg-fourth dark:text-primary ${
-          isActive ? 'bg-black text-white dark:bg-white dark:text-black' : ''
+          isActive ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900' : ''
         }`}
         {...props}
       >
