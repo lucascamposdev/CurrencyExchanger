@@ -11,16 +11,18 @@ import {
 
 import ThemeToggler from "./ThemeToggler";
 import React from "react";
-import getCookieData from "@/utils/getCookieData";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import { useSocket } from "@/hooks/useSocket";
 
 const UserMenu = () => {
-  const cookieObject = getCookieData();
-  const { logout } = useAuth();
+  const logout = useAuth().logout;
+  const userData = useAuth().userData;
   const navigate = useNavigate();
+  const disconnetFromWebSocket = useSocket().disconnectFromWebSocket;
 
   const handleLogout = () =>{
+    disconnetFromWebSocket();
     logout();
     navigate("/auth/login");
   }
@@ -30,14 +32,14 @@ const UserMenu = () => {
     <Popover>
         <PopoverTrigger asChild>
             <ShadCnAvatar className="cursor-pointer">
-                <AvatarFallback>{cookieObject?.userData?.name[0]?.toLocaleUpperCase()}</AvatarFallback>
+                <AvatarFallback>{userData?.name[0]?.toLocaleUpperCase()}</AvatarFallback>
             </ShadCnAvatar>
         </PopoverTrigger >
 
         <PopoverContent className="rounded-xl">
             <div className="flex flex-col items-start">
-                <p>{cookieObject?.userData.name}</p>
-                <p className="text-[12px] text-gray-500">{cookieObject?.userData.email}</p>
+                <p>{userData?.name}</p>
+                <p className="text-[12px] text-gray-500">{userData?.email}</p>
             </div>
             <hr className="my-5"/>
             <ListItem><ThemeToggler/></ListItem>

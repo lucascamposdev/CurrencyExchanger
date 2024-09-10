@@ -1,16 +1,22 @@
 import { useTheme } from '@/context/ThemeContext'
 import Navbar from '../features/Navbar/Navbar'
-import getCookieData from '@/utils/getCookieData';
 import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { useEffect } from 'react';
 
 const MainLayout = () => {
   const { theme } = useTheme();
-  const cookieObject = getCookieData();
+  const userData = useAuth().userData;
+  const validateToken = useAuth().validateToken;
+
+  useEffect(() =>{
+    validateToken()
+  }, [])
   
   return (
-    <div className={`${theme === 'light' ? 'bg-primary text-secondary' : 'bg-secondary text-primary'} h-screen flex flex-col`}>
+    <div className={`h-auto min-h-screen ${theme === 'light' ? 'bg-primary text-secondary' : 'bg-secondary text-primary'} h-screen flex flex-col`}>
       <Navbar/>
-      {cookieObject?.userData ? <Outlet /> : <Navigate to="/auth/login"/>}
+      {userData ? <Outlet /> : <Navigate to="/auth/login"/>}
     </div>
   )
 }

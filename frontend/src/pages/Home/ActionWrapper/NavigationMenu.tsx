@@ -49,7 +49,7 @@ type NavigationMenuProps = {
     return (
       <button
         className={`flex text-sm sm:flex-1 justify-center p-3 sm:rounded rounded-full sm:flex-row flex-col items-center gap-3 bg-third text-secondary dark:bg-fourth dark:text-primary ${
-          isActive ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900' : ''
+          isActive ? 'invert' : ''
         }`}
         {...props}
       >

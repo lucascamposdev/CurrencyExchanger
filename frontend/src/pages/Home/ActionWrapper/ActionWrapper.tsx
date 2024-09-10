@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavigationMenu from "./NavigationMenu";
+import Convert from "./MenuItems/Convert";
 
 export type ContentsType = {
   first: string;
@@ -23,7 +24,7 @@ const MenuWrapper = ({ className }: Props) => {
   const renderContent = () =>{
     switch (activeComponent) {
       case contents.first:
-        return <div>1</div>
+        return <Convert/>
 
       case contents.second:
         return <div>2</div>
@@ -36,9 +37,9 @@ const MenuWrapper = ({ className }: Props) => {
   }
 
   return (
-    <div className={`mx-5 ${className}`}>
+    <div className={`m-5  ${className}`}>
         <NavigationMenu activeComponent={activeComponent} togglePage={setActiveComponent} contents={contents}/>
-        <div className="bg-third dark:bg-fourth rounded mt-5 md:mt-2">
+        <div className="bg-third dark:bg-fourth rounded mt-5 md:mt-2  h-[475px] overflow-y-scroll border border-opacity-20 dark:border-opacity-20 border-secondary dark:border-primary ">
             {renderContent()}
         </div>
     </div>
