@@ -3,8 +3,12 @@
     "",
     "\\backend",
     "\\backend\\application",
-    "\\backend\\application\\User"
+    "\\backend\\application\\Mapper",
+    "\\backend\\application\\User",
+    "\\backend\\domain",
+    "\\SocketQuotes",
+    "\\SocketQuotes\\application",
+    "\\SocketQuotes\\application\\services"
   ],
-  "SelectedNode": "\\backend\\application\\User\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }

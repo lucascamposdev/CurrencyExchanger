@@ -3,32 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\application\\user\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:application\\user\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}|..\\SocketQuotes\\SocketQuotes.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\socketquotes\\application\\services\\socketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\application\\user\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:application\\user\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{264E1C80-15E4-4636-B502-1CE14FF9527E}|..\\Common\\Common.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\common\\dto\\exchangeratesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\infra\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:infra\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\backend\\application\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEBACD0-99F5-495D-802A-442CAFD72B04}|backend.csproj|solutionrelative:application\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}|..\\SocketQuotes\\SocketQuotes.csproj|c:\\users\\lucas\\onedrive\\\u00E1rea de trabalho\\currencyexchanger\\socketquotes\\application\\handlers\\sockethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +19,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".env",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\.env",
-              "RelativeDocumentMoniker": ".env",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\.env",
-              "RelativeToolTip": ".env",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-08-29T00:27:44.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Context.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\Infra\\Context.cs",
-              "RelativeDocumentMoniker": "Infra\\Context.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\Infra\\Context.cs",
-              "RelativeToolTip": "Infra\\Context.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T00:20:40.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "backend.csproj",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\backend.csproj",
-              "RelativeDocumentMoniker": "backend.csproj",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\backend.csproj",
-              "RelativeToolTip": "backend.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-29T00:18:46.171Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\application\\User\\AuthController.cs",
-              "RelativeDocumentMoniker": "application\\User\\AuthController.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\application\\User\\AuthController.cs",
-              "RelativeToolTip": "application\\User\\AuthController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAqwDcAAAAJAAAA",
+              "Title": "SocketService.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\SocketQuotes\\application\\services\\SocketService.cs",
+              "RelativeDocumentMoniker": "..\\SocketQuotes\\application\\services\\SocketService.cs",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\SocketQuotes\\application\\services\\SocketService.cs",
+              "RelativeToolTip": "..\\SocketQuotes\\application\\services\\SocketService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAIAwwBwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T18:30:58.61Z",
+              "WhenOpened": "2024-09-10T16:03:40.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\application\\Mapper\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "application\\Mapper\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\application\\Mapper\\MappingProfile.cs",
-              "RelativeToolTip": "application\\Mapper\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "ExchangeRatesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\Common\\DTO\\ExchangeRatesDTO.cs",
+              "RelativeDocumentMoniker": "..\\Common\\DTO\\ExchangeRatesDTO.cs",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\Common\\DTO\\ExchangeRatesDTO.cs",
+              "RelativeToolTip": "..\\Common\\DTO\\ExchangeRatesDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T18:30:53.498Z"
+              "WhenOpened": "2024-09-10T16:00:32.057Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAD4vxIAAAABAAAA",
+              "Title": "SocketHandler.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\SocketQuotes\\application\\handlers\\SocketHandler.cs",
+              "RelativeDocumentMoniker": "..\\SocketQuotes\\application\\handlers\\SocketHandler.cs",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\SocketQuotes\\application\\handlers\\SocketHandler.cs",
+              "RelativeToolTip": "..\\SocketQuotes\\application\\handlers\\SocketHandler.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAowDwAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T17:33:58.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\application\\User\\AuthService.cs",
-              "RelativeDocumentMoniker": "application\\User\\AuthService.cs",
-              "ToolTip": "C:\\Users\\lucas\\OneDrive\\\u00C1rea de Trabalho\\CurrencyExchanger\\backend\\application\\User\\AuthService.cs",
-              "RelativeToolTip": "application\\User\\AuthService.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAwwEwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T17:33:34.394Z",
+              "WhenOpened": "2024-09-05T21:45:31.236Z",
               "EditorCaption": ""
             }
           ]

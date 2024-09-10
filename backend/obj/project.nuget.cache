@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q7XRiZ93z9A=",
+  "dgSpecHash": "Z4FUs5ZOjBc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\CurrencyExchanger\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\CurrencyExchanger\\backend\\UserManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

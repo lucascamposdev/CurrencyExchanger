@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend", "backend.csproj", "{ADEBACD0-99F5-495D-802A-442CAFD72B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagement", "UserManagement.csproj", "{ADEBACD0-99F5-495D-802A-442CAFD72B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketQuotes", "..\SocketQuotes\SocketQuotes.csproj", "{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{264E1C80-15E4-4636-B502-1CE14FF9527E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{ADEBACD0-99F5-495D-802A-442CAFD72B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADEBACD0-99F5-495D-802A-442CAFD72B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADEBACD0-99F5-495D-802A-442CAFD72B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D722A1-C48D-49BF-8EFA-4D40ECC86EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264E1C80-15E4-4636-B502-1CE14FF9527E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264E1C80-15E4-4636-B502-1CE14FF9527E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264E1C80-15E4-4636-B502-1CE14FF9527E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264E1C80-15E4-4636-B502-1CE14FF9527E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

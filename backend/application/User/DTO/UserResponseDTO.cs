@@ -12,5 +12,7 @@ public class UserData
 {
     public string Email { get; set; }
     public string Name { get; set; }
+    public string Currency {  get; set; }
+    public decimal Balance { get; set; }
 }
 

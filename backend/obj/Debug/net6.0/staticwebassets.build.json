@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "7/yvsnDRTixX0vVer35KSjS1HzfM4rGxA/gc1emwSdw=",
-  "Source": "backend",
-  "BasePath": "_content/backend",
+  "Hash": "Qqsgj0OmDfxV+u9nCWgHe2EryWKqVKB1UyoZL+v8pDg=",
+  "Source": "UserManagement",
+  "BasePath": "_content/UserManagement",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
